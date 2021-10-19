@@ -46,7 +46,7 @@ Note that while this repository is unsupported, Microchip welcome community cont
    1. [LoRaWAN Mote Application](#step6a)
    2. [LoRaWAN Mote Application + ECC608](#step6b)
    3. [RN Command Parser](#step6c)
-   4. [RN Command Parser + ECC608](#step6d)
+<!--   4. [RN Command Parser + ECC608](#step6d)-->
 
 ## Introduction<a name="step1"></a>
 
@@ -154,7 +154,22 @@ The following table provides the directory structure of the LoRaWAN stack code b
 | EndDevice_Demo | SAMR34 Xplained Pro | `MLS_SDK_1_0_P_6_Release/Enddevice_Demo/enddevice_demo_src_multiband_samr34_xpro` |
 | EndDevice_Demo | WLR089U0 Xplained Pro | `MLS_SDK_1_0_P_6_Release/Enddevice_Demo/enddevice_demo_src_multiband_wlr089_xpro` |
 
-The EndDevice_Demo application provides configurable parameters in `conf_app.h` available in `src/config`.</br>
+The EndDevice_Demo application provides configuration for the application in `src/config/conf_app.h` where it is possible to configure the following parameters:
+* Sub band number
+* Activation methods (OTAA or ABP)
+* Type of transmission (confirmed or unconfirmed message)
+* Application port number (Fport 1-255)
+* Device Class (A or C)
+* Type of join Nonce (incremental or random)
+* Join parameters (OTAA or ABP)
+* Multicast parameters
+* Sleep duration in milliseconds
+* Periodic timer duration in milliseconds (used for periodic transmission option)
+
+> Note #1: In SAM R34 project, the macro `EDBG_EUI_READ=1` is set by default in the symbols definition. This configuration can be use with SAM R34 Xplained Pro evaluation kit in order to use the EDBG EUI as DEVEUI key for Over-The-Air Join process. With a custom board which embed the SAM R34 IC, disable the macro `EDBG_EUI_READ=0` and fill your own DEVEUI key in the definition of `DEMO_DEVICE_EUI` located in the file `src/config/conf_app.h`.
+
+> Note #2: In WLR089U0 project, the macro `MODULE_EUI_READ=1` is set by default in the symbols definition. This configuration can be use either with WLR089U0 Xplained Pro evaluation kit or with custom board.
+
 
 Checkout the [SAM R34 MLS Getting Started Guide](https://www.microchip.com/en-us/product/ATSAMR34J18#document-table) to get details on the application configuration and how to flash and run the project.
 
@@ -175,7 +190,9 @@ Use the present software and refer to the following resources to get more detail
 
 Checkout the instructions and get the software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
 
-
+<!--
 ### RN Command Parser + ECC608<a name="step6d"></a>
 
 Checkout the instructions and get the software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
+
+-->
