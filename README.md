@@ -44,9 +44,9 @@ Note that while this repository is unsupported, Microchip welcome community cont
 1. [Package Overview](#step5)
 1. [Sample Applications](#step6)
    1. [LoRaWAN Mote Application](#step6a)
-   2. [LoRaWAN Mote Application + ECC608](#step6b)
+   2. [LoRaWAN Mote Application + ATECC608B_TNG](#step6b)
    3. [RN Command Parser](#step6c)
-<!--   4. [RN Command Parser + ECC608](#step6d)-->
+   4. [RN Command Parser + ATECC608B_TNG](#step6d)
 
 ## Introduction<a name="step1"></a>
 
@@ -72,7 +72,7 @@ MLS v1_0_P_6 release is pre-tested against LoRaWAN 1.0.4 Class A using official 
 
 * Purchase a LoRa Gateway
 
-* If using a Join Server with security solution for LoRaWAN, a pre-provisioned ECC608 secure element is required. Purchase the [ATECC608B-TNGLORA](https://www.microchip.com/en-us/product/ATECC608B-TNGLORA) and the [CryptoAuthentication Socket Kit](https://www.microchip.com/en-us/product/ATECC608B-TNGLORA)
+* If using a Join Server with security solution for LoRaWAN, a pre-provisioned ATECC608 secure element is required. Purchase the Trust&GO secure element [ATECC608B-TNGLORA](https://www.microchip.com/en-us/product/ATECC608B-TNGLORA) for TTI Join Server or the [ATECC608B-TNGACT](https://www.microchip.com/ATECC608B-TNGACT) for Actility Join Server and the [CryptoAuthentication Socket Kit](https://www.microchip.com/en-us/product/ATECC608B-TNGLORA)
 
 
 ## Software Requirements<a name="step3"></a>
@@ -118,7 +118,7 @@ The Microchip LoRaWAN Stack contains:
 * Drivers, software timer, PDS, PMM and radio drivers for the LoRaWAN stack
 * The facility to support dynamic regional band switching within the supported bands
 
-The package also contains the **Migration Guide** which provide all the information need to migrate the MLS LoRaWAN applications implemented on MLS_SDK_1_0_P_5 available in SAM platforms (SAMR34, WLR) to MLS_SDK_1_0_P_6. The improvements and bugfixes are listed as well as the MLS API changes.
+The package also contains the **Migration Guide** which provide all the information requested to migrate the MLS LoRaWAN applications implemented on MLS_SDK_1_0_P_5 available in SAM platforms (SAMR34, WLR) to MLS_SDK_1_0_P_6. The improvements and bugfixes are listed as well as the MLS API changes.
 
 MLS provides APIs for following software modules:
 * LoRaWAN MAC Layer (MAC)
@@ -173,7 +173,7 @@ The EndDevice_Demo application provides configuration for the application in `sr
 
 Checkout the [SAM R34 MLS Getting Started Guide](https://www.microchip.com/en-us/product/ATSAMR34J18#document-table) to get details on the application configuration and how to flash and run the project.
 
-### LoRaWAN Mote Application + ECC608<a name="step6b"></a>
+### LoRaWAN Mote Application + ATECC608B_TNG<a name="step6b"></a>
 
 | Application | Target | Location |
 | ----------- | ------ | -------- |
@@ -188,11 +188,19 @@ Use the present software and refer to the following resources to get more detail
 
 ### RN Command Parser<a name="step6c"></a>
 
-Checkout the instructions and get the software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
+| Application | Target | Location |
+| ----------- | ------ | -------- |
+| Parser_multiband_src | SAMR34 Xplained Pro | [RN Command Parser](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
+| Parser_multiband_src | WLR089U0 Xplained Pro | [RN Command Parser](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
 
-<!--
-### RN Command Parser + ECC608<a name="step6d"></a>
+Checkout the instructions and get the latest software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
 
-Checkout the instructions and get the software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
+### RN Command Parser + ATECC608B_TNG<a name="step6d"></a>
 
--->
+| Application | Target | Location |
+| ----------- | ------ | -------- |
+| Parser_multiband_ecc608_src | SAMR34 Xplained Pro | [RN Command Parser + ATECC608B_TNG](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
+| Parser_multiband_ecc608_src | WLR089U0 Xplained Pro | [RN Command Parser + ATECC608B_TNG](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
+
+Checkout the instructions and get the latest software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
+
