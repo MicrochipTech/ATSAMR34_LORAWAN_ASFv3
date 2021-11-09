@@ -190,8 +190,8 @@ Use the present software and refer to the following resources to get more detail
 
 | Application | Target | Location |
 | ----------- | ------ | -------- |
-| Parser_multiband_src | SAMR34 Xplained Pro | [RN Command Parser](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
-| Parser_multiband_src | WLR089U0 Xplained Pro | [RN Command Parser](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
+| Parser | SAMR34 Xplained Pro | [RN Command Parser](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
+| Parser | WLR089U0 Xplained Pro | [RN Command Parser](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
 
 Checkout the instructions and get the latest software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
 
@@ -199,8 +199,8 @@ Checkout the instructions and get the latest software from the <a href="https://
 
 | Application | Target | Location |
 | ----------- | ------ | -------- |
-| Parser_multiband_ecc608_src | SAMR34 Xplained Pro | [RN Command Parser + ATECC608B_TNG](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
-| Parser_multiband_ecc608_src | WLR089U0 Xplained Pro | [RN Command Parser + ATECC608B_TNG](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
+| Parser_ECC608 | SAMR34 Xplained Pro | [RN Command Parser + ATECC608B_TNG](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
+| Parser_ECC608 | WLR089U0 Xplained Pro | [RN Command Parser + ATECC608B_TNG](https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser) |
 
 Checkout the instructions and get the latest software from the <a href="https://github.com/MicrochipTech/atsamr34_lorawan_rn_parser" target="_blank">RN Command Parser</a> repository.
 
