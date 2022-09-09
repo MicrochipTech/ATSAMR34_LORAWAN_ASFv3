@@ -382,7 +382,7 @@
   <documentation help="https://asf.microchip.com/docs/3.51.0/thirdparty.wireless.lorawan.apps.enddevice_demo.enddevice_demo_src.multiband_ecc608.wlr089_xpro/html/index.html" />
   <offline-documentation help="" />
   <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.42.0" />
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.44.1" />
   </dependencies>
   <project id="thirdparty.wireless.lorawan.apps.enddevice_demo.enddevice_demo_src.multiband_ecc608.wlr089_xpro" value="Add" config="" content-id="Atmel.ASF" />
   <board id="board.wlr089_xplained_pro" value="Add" config="" content-id="Atmel.ASF" />
@@ -961,6 +961,12 @@
     </PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Device_Startup\startup_wlr089u0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_wlr089u0.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\ASF\common2\services\delay\sam0\systick_counter.c">
       <SubType>compile</SubType>
     </Compile>
@@ -1306,6 +1312,12 @@
     <Compile Include="src\ASF\thirdparty\wireless\services\nvm\sam0\sam_nvm.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="Device_Startup\wlr089u0_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\wlr089u0_sram.ld">
+      <SubType>compile</SubType>
+    </None>
     <None Include="src\asf.h">
       <SubType>compile</SubType>
     </None>
@@ -2016,6 +2028,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Device_Startup\" />
     <Folder Include="src\" />
     <Folder Include="src\ASF\" />
     <Folder Include="src\ASF\common\" />
